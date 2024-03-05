@@ -51,5 +51,3 @@ send.onclick = function () {
 };
 
 // end fun chat
-
-sound
