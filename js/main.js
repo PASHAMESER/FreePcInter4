@@ -12,11 +12,12 @@ conImgChat.onclick = function () {
 };
 
 // start fun chat
+
 let audioFile = new Audio("../sound/notification.mp3")
 
-// let funAudioNotf = ()=>{
-//   audioFile.play()
-// }
+let funAudioNotf = ()=>{
+  audioFile.play()
+}
 
 send.onclick = function () {
   let msgUserChat = document.createElement("p");
@@ -28,16 +29,16 @@ send.onclick = function () {
   if (textarea.value === "") {
     setTimeout(() => {
       bodyItemChat.innerHTML += ` <p id= "msg-bot-chat" > الدردشة فارغة من فضلك راسلنا بشكل صحيح </p> `;
-      audioFile.play()
+      funAudioNotf()
       setTimeout(() => {
         bodyItemChat.innerHTML += ` <p id= "msg-bot-chat" > المساعد الذكى هل تريد ان اساعدك ؟ </p> `;
-        audioFile.play()
+        funAudioNotf()
         setTimeout(() => {
           bodyItemChat.innerHTML += ` <p id= "msg-bot-chat" >  يمكنك التواصل مع صانع البرمجية لشراء الخدمة التى تقدمها المنصة من خلال هذا الرابط </p> `;
-          audioFile.play()
+          funAudioNotf()
           setTimeout(()=>{
             bodyItemChat.innerHTML += ` <p id= "msg-bot-chat" > https://t.me/IncreaseSpeed </p> `;
-            audioFile.play()
+            funAudioNotf()
           },1000)
         }, 3000);
       }, 1000);
