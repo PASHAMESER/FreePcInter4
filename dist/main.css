@@ -49,6 +49,9 @@ body {
   font-family: "Tajawal-ExtraBold";
   color: #ffffff;
 }
+.contaner-haeder .logo-text-img h1 {
+  font-size: 22px;
+}
 
 
 /* start-Sce-one */
@@ -151,6 +154,7 @@ body {
 .contener-Page .con-app-sce-one .div-text-link h1 {
   color: white;
   font-weight: 200;
+  font-size: 20px;
 }
 
 .contener-Page .con-app-sce-one p {
