@@ -11,6 +11,13 @@ conImgChat.onclick = function () {
   conItemChat.classList.add("Show-scale");
 };
 
+// start fun chat
+let audioFile = new Audio("../sound/notification.mp3")
+
+let funAudioNotf = ()=>{
+  audioFile.play()
+}
+
 send.onclick = function () {
   let msgUserChat = document.createElement("p");
   msgUserChat.id = "msg-user-chat";
@@ -21,12 +28,16 @@ send.onclick = function () {
   if (textarea.value === "") {
     setTimeout(() => {
       bodyItemChat.innerHTML += ` <p id= "msg-bot-chat" > الدردشة فارغة من فضلك راسلنا بشكل صحيح </p> `;
+      funAudioNotf()
       setTimeout(() => {
         bodyItemChat.innerHTML += ` <p id= "msg-bot-chat" > المساعد الذكى هل تريد ان اساعدك ؟ </p> `;
+        funAudioNotf()
         setTimeout(() => {
           bodyItemChat.innerHTML += ` <p id= "msg-bot-chat" >  يمكنك التواصل مع صانع البرمجية لشراء الخدمة التى تقدمها المنصة من خلال هذا الرابط </p> `;
+          funAudioNotf()
           setTimeout(()=>{
             bodyItemChat.innerHTML += ` <p id= "msg-bot-chat" > https://t.me/IncreaseSpeed </p> `;
+            funAudioNotf()
           },1000)
         }, 3000);
       }, 1000);
@@ -38,3 +49,7 @@ send.onclick = function () {
     textarea.focus();
   }
 };
+
+// end fun chat
+
+sound
