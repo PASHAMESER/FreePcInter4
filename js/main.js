@@ -13,7 +13,7 @@ conImgChat.onclick = function () {
 
 // start fun chat
 
-let audioFile = new Audio("../sound/notification.mp3")
+let audioFile = new Audio("./sound/notification.mp3")
 
 let funAudioNotf = ()=>{
   audioFile.play()
