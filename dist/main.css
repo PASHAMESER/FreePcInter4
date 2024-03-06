@@ -276,6 +276,23 @@ body {
 }
 
 /* start-Chat */
+
+.con-item-img-span {
+  display: flex;
+  align-items: center;
+}
+.con-item-img-span #spanOnline {
+  /* background-color: rgb(189, 0, 116); */
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    border: solid 1px ;
+}
+.con-item-img-span #text-active {
+  color: #eef2ff80;
+  font-family: "Tajawal-Regular";
+  padding: 0px 5px;
+}
 .con-img-chat {
   position: fixed;
   z-index: 100;

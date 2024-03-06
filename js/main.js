@@ -13,11 +13,39 @@ conImgChat.onclick = function () {
 
 // start fun chat
 
-let audioFile = new Audio("./sound/notification.mp3")
+// Not connected
+let spanOnline = document.getElementById("spanOnline");
+let textActive = document.getElementById("text-active");
 
-let funAudioNotf = ()=>{
-  audioFile.play()
-}
+window.addEventListener("online", () => {
+  funOnline();
+});
+window.addEventListener("offline", () => {
+  funOffline();
+});
+
+let funOnline = () => {
+  spanOnline.style.background = "green";
+  textActive.innerHTML = " Active now "
+};
+let funOffline = () => {
+  spanOnline.style.background = "red";
+  textActive.innerHTML = " Not connected "
+};
+
+window.onload = function () {
+  if (window.navigator.onLine) {
+    funOnline();
+  } else {
+    funOffline();
+  }
+};
+
+let audioFile = new Audio("../sound/notification.mp3");
+
+let funAudioNotf = () => {
+  audioFile.play();
+};
 
 send.onclick = function () {
   let msgUserChat = document.createElement("p");
@@ -29,17 +57,17 @@ send.onclick = function () {
   if (textarea.value === "") {
     setTimeout(() => {
       bodyItemChat.innerHTML += ` <p id= "msg-bot-chat" > الدردشة فارغة من فضلك راسلنا بشكل صحيح </p> `;
-      funAudioNotf()
+      funAudioNotf();
       setTimeout(() => {
         bodyItemChat.innerHTML += ` <p id= "msg-bot-chat" > المساعد الذكى هل تريد ان اساعدك ؟ </p> `;
-        funAudioNotf()
+        funAudioNotf();
         setTimeout(() => {
           bodyItemChat.innerHTML += ` <p id= "msg-bot-chat" >  يمكنك التواصل مع صانع البرمجية لشراء الخدمة التى تقدمها المنصة من خلال هذا الرابط </p> `;
-          funAudioNotf()
-          setTimeout(()=>{
+          funAudioNotf();
+          setTimeout(() => {
             bodyItemChat.innerHTML += ` <p id= "msg-bot-chat" > https://t.me/IncreaseSpeed </p> `;
-            funAudioNotf()
-          },1000)
+            funAudioNotf();
+          }, 1000);
         }, 3000);
       }, 1000);
     }, 1000);
