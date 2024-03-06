@@ -41,7 +41,7 @@ window.onload = function () {
   }
 };
 
-let audioFile = new Audio("../sound/notification.mp3");
+let audioFile = new Audio("./sound/notification.mp3");
 
 let funAudioNotf = () => {
   audioFile.play();
