@@ -277,6 +277,33 @@ body {
 
 /* start-Chat */
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #9c27b0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#img-minimize{
+  height: 15px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
 .con-item-img-span {
   display: flex;
   align-items: center;

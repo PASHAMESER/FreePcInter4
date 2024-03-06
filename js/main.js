@@ -3,6 +3,11 @@ let conItemChat = document.getElementsByClassName("con-item-chat")[0];
 let send = document.getElementById("send");
 let textarea = document.getElementById("textarea");
 let bodyItemChat = document.getElementById("body-item-chat");
+let imgMinimize = document.getElementById("img-minimize");
+
+imgMinimize.onclick = function () {
+  conItemChat.classList.remove("Show-scale");
+}
 
 conImgChat.onclick = function () {
   textarea.focus();
@@ -41,7 +46,7 @@ window.onload = function () {
   }
 };
 
-let audioFile = new Audio("../sound/notification.mp3");
+let audioFile = new Audio("./sound/notification.mp3");
 
 let funAudioNotf = () => {
   audioFile.play();
